@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conor Button</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style>
+    .bg-1 {
+      background: #393E41; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(left top, #393E41, #414649); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(bottom right, #393E41, #414649); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(bottom right, #393E41, #414649); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to bottom right, #393E41, #414649); /* Standard syntax */
+    }
+    html {
+      height: 100%;
+    }
+    body {
+      height: 100%;
+      margin: 0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #FBFBF2;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .bg-2 {
+      background-color: #EAEBED;
+    }
+    .bg-3 {
+      background-color: #A9F8FB;
+    }
+      @import url('https://fonts.googleapis.com/css?family=Orbitron');
+    .jumbotron{
+      background: rgba(0, 0, 0, 0);
+    }
+    img.center {
+      display: block;
+      margin: 0 auto;
+    }
+    img {
+      -webkit-filter: grayscale(75%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(75%);
+      }
+    .circle-text {
+      width:20%;
+      vertical-align: top;
+    }
+    .circle-text:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height:100%;
+      padding-bottom: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+    }
+    .circle-text div {
+      float:left;
+      width:100%;
+      padding-top:50%;
+      line-height:1em;
+      margin-top:-0.5em;
+      text-align:center;
+      color:white;
+      padding-top: 25%;
+    }
+    .btn{
+      background: rgba(0, 0, 0, 0);
+      border-color: rgba(0, 0, 0, 1);
+    }
+    .btn:hover{
+      background: rgba(0, 0, 0, 0.5);
+      border-color: rgba(0, 0, 0, 1);
+    }
+  </style>
+  <script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Mar 17, 2017 20:37:25").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("days").innerHTML = days + "<br></br>" + " Days";
+      document.getElementById("hours").innerHTML = hours + "<br></br>" + " Hours";
+      document.getElementById("minutes").innerHTML = minutes + "<br></br>" + " Minutes";
+      document.getElementById("seconds").innerHTML = seconds + "<br></br>" + " Seconds";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+  }, 100);
+  </script>
+  <body onload="startTime()" class="bg-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <h2 class="text-center">Conor Button</h2>
+          <br></br>
+        </div>
+      </div>
+        <br></br>
+          <img src="land1.jpg" class="img-rounded center" height="200px" width="200px">
+      <div class="row">
+        <h2 class="text-center">Launching In!</h2>
+        <div class="col-sm-2"></div>
+        <div class="container-fluid">
+          <div class="col-sm-2"><div>
+            <h2 class="text-center" id="days"></h2>
+          </div>
+          </div>
+          <div class="col-sm-2">
+            <h2 class="text-center" id="hours"></h2>
+          </div>
+          <div class="col-sm-2">
+            <h2 class="text-center" id="minutes"></h2>
+          </div>
+          <div class="col-sm-2">
+            <h2 class="text-center" id="seconds"></h2>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <form class="form">
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control text-center" placeholder="Enter your email to learn more!" />
+              <i class="glyphicon glyphicon-envelope form-control-feedback"></i>
+            </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            <br></br>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
